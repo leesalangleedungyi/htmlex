@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-3.6.1.min.js"></script>
+</head>
+<body>
+    <h2>클릭하면 사라집니다</h2>
+    <p class="para1">이것은 문단입니다,</p>
+    <p id="para2">이것은 두번째 문단입니다.</p>
+    <script>
+        //$ : jquery의 축약형 ,() css selector가 능
+        $("h2").click(function(){
+            $(this).hide();
+        });
+
+        // para1 css변경
+
+        $(".para1").click(function(){
+            $(this).css('color','orange');
+        });
+    </script>
+</body>
+</html>

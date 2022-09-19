@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!--
+        form: 웹서버에 제출하기 위한 양식 범위 정의
+        form은 다른 form을 자식요소로 포함 못함
+
+        action : 전송한 정보를 처리할 웹페이지의 url
+
+        method : get(기본방식) - 사용자 입력값이 주소줄에 따라가는 방식
+    -->
+    <form 
+    action="폼2.html" method="get">
+
+    
+    <div>
+        <label for="username">이름</label>
+        <input type="text " name="username" id="username" value="홍길동"/>
+    </div>
+    <div>
+        <label for="age">나이</label>
+        <input type="text" name="age" id="age" />
+    </div>
+    <div>
+        <label for="password">비밀번호</label>
+        <input type="password" name="password" id="password"/>
+    </div>
+    <div>
+        <button type="button">보내기
+        </button>
+    </div>
+    </form>
+
+    <script>
+        //버튼이 클릭이 되면 이름 , 입력값을 가져옴 해당 요소가 값이 없으면 되돌려 보내기 
+        btn = document.querySelector("button")
+        btn.addEventListener("click",function(){
+            let username = 
+            document.querySelector("#username");
+            
+            
+
+            //비밀번호 가져오기
+
+            let password = document.querySelector("#password");
+            
+
+            // age 가져오기 
+
+            let age = document.querySelector('#age')
+
+            if(username.value == ''){
+                alert ( '이름을 입력하세요');
+                username.focus();
+                return;
+            }
+            else if(age.value==""){
+                alert('나이를 입력하세요');
+                age.focus();
+                return;
+            }
+            else if(password.value==""){
+                alert('비밀번호를 입력하세요')
+                password.focus();
+                return;
+            }
+            
+        })
+
+    </script>
+</body>
+</html>

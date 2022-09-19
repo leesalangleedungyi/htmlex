@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1> simple html</h1>
+    </header>
+    <div id="content">
+        <p> this is a <i>simple</i> html file</p>
+    </div>
+    <div class="callout">
+        <p> this is as fancy as we'll get</p>
+    </div>
+    
+    <p> id (such as <span class="code">#content</span>) are unique ( there) can only be one per page)</p>
+
+    <p>
+        classes (such as <span class = "code"> .callout
+        </span>) can be used on mnay elemnets 
+
+    </p>
+
+    <div id="callout2" class = " callout fancy">
+        <p> a single html element can have multiple classes</p>
+    </div>
+    <script>
+
+        const p1 = document.createElement("p");
+        const p2 = document.createElement("p");
+        
+        p1.innerText = " i was created dynamically";
+        p2.innerText = " i was also created dynamically";
+
+        const content = document.getElementById("content");
+
+        content.insertBefore(p1,content.firstElementChild);
+        content.appendChild(p2);
+    </script>
+</body>
+</html>

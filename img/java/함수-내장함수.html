@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //내장함수
+        //encodeURI()
+        
+        document.write(encodeURI('http://localhost:8080/basic/info.html?name=홍길동&age=15'));
+        document.write('<br>');
+        document.write
+        (encodeURIComponent('http://localhost:8080/basic/info.html?name=홍길동&age=15'))
+        document.write('<br>')
+
+        document.write('<h3>디코딩</h3>')
+        
+        document.write(decodeURI('http://localhost:8080/basic/info.html?name=홍길동&age=15'));
+        document.write('<br>');
+        document.write
+        (decodeURIComponent('http://localhost:8080/basic/info.html?name=홍길동&age=15'))
+
+
+        //타이머 함수
+        document.write("<br>")
+        document.write("<h3>타이머</h3>")
+       // setTimeout(function(){
+          //  alert('3초가 지났습니다.');
+        //},3000);
+
+
+        // eval ( ) :문자열을 코드로 실행할 수 있는 함수
+        //var text = '';
+        //test += 'var number=10;';
+        //test += 'alert(number);';
+        //eval(test);
+
+        //isNaN () : 숫자인지 아닌지 확인
+
+        //var number = prompt('숫자를 입력하세요')
+
+        //if(isNaN(number)){
+          //  alert('문자');
+        //}else{
+          //  alert('숫자');
+        //}
+        
+        //parseInt() : 문자 -> 정수 , parseFloat() : 문자 -> 실수
+
+        var won = '1000';
+        var dollar = 1.5;
+
+        document.write('<h3>문자변환</h3>');
+        document.write(parseInt(won)+ " "+ parseFloat(dollar));
+        document.write('<br>');
+        document.write(parseFloat(won)+ ' '+parseFloat(dollar));
+
+        
+
+    </script>
+</body>
+</html>

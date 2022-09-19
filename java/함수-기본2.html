@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- 클릭하면 나오게 하기 -->
+    <button type="button" onclick="showdialog2()"> 클릭</button>
+
+    <button type="button" onclick="func1('hello')">클릭1</button>
+    <script>
+        //함수
+        //function 함수명(arg)   
+        
+
+        // 익명함수 - 호이스팅 불가능
+
+        let func2 = function(greeting,name){
+            alert (greeting+"!"+name);
+        }
+        // 기명함수 - 호이스팅 불가능
+        let func1 = function showDialog(greeting,name){ 
+            alert(greeting + "!"+ name);
+        }
+       // 호이스팅 가능
+        function showdialog2(){
+            alert('안녕하세요!')
+        }
+        // 호출
+       // showDialog('hello','hong');
+       //showdialog2();
+    </script>
+    
+</body>
+</html>

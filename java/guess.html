@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div *{
+            padding : 10px;
+            margin:10px;
+        }
+        [readonly]{
+            background-color: lightgray;
+        }
+    </style>
+</head>
+<body>
+    <h3> 숫자 맞추기 게임</h3>
+
+    <p>
+        이 게임은 컴퓨터가 생성한 숫자를 맞추는 게임입니다
+        숫자는 1부터 100사이에 있습니다.
+    </p>
+    <div>
+        <label for="num1">숫자</label>
+        <input type="text" name= "num1" id=" num1" size =5 />
+        <button type="button">확인</button>
+    </div>
+    <div>
+        <label for="guess">추측횟수</label>
+        <input type="text" name="count" id="count" szie =5 readonly />
+    </div>
+    <div>
+        <label for="hint">힌트</label>
+        <input type="text" name="hint" id="hint" readonly/>
+    </div>
+    <script>
+        let btn = document.querySelector('button');
+
+        btn.addEventListener("click",guess);
+
+        const random = Math.floor(random()*100);
+        
+        let nguess=0;
+        function guess(){
+            // 사용자가 입력한 숫자 가져오기
+            let number=parseInt(document.querySelector('#num1').value);
+            // 입력한 숫자랑 임의의 숫자랑 맞는지 확인
+
+            var result = "";
+
+            if(number == random){
+                result = '정답입니다.';
+            
+            }
+            else if(number > random){
+                result='숫자가 큽니다.';
+
+            }
+            else{
+                result='숫자가 작습니다..';
+            } 
+
+            document.getElementById('hint').value =result;
+
+            nguess++;
+            document.getElementById('count').value = nguess;
+        }
+    </script>
+</body>
+</html>

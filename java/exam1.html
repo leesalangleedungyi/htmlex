@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="ex">div로 선언되었습니다.</div>
+    <div>
+        <a href="#" onclick="get()">div 요소 내용 출력하기</a>
+    </div>
+    <div>
+        <a href="# "onclick="set('변경되었습니다')">div 요소 내용 변경하기</a>
+    </div>
+    <img src="./아이유4.gif"" alt="아이유" onclick="changeImg()"/>
+    <p id="p1">이것은 문단입니다.</p>
+    <button type="button" onclick="changesStyle()">누르세요</button>
+    <script>
+
+        let ex = document.getElementById("ex");
+        function get(){
+            // div id = ex 요소의 내용을 alert 출력
+           let msg = ex.innerText;
+           alert(msg);
+        }
+
+        function set(msg) {
+            // 위 내용을 msg로 변경
+            ex.innerText = msg;
+
+        }
+
+        function changeImg(){
+            //다른 이미지로 변경
+            document.querySelector('img').src = "./아이유2.gif";
+        }
+
+        function changesStyle(){
+            //버튼을 클릭하면 p1의 스타일 변경
+            let p1 = document.getElementById("p1")
+
+            // 글꼴 변경
+            p1.style.fontFamily = '궁서';
+            // 색상 변경
+            p1.style.color = 'red';
+            // italic
+            p1.style.fontstyle = 'ltalic';
+            
+        }
+    </script>
+</body>
+</html> 

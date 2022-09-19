@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id='exam'></p>
+    <p id='exam2'></p>
+
+    <script>
+        //기본 자료형
+
+        //숫자 ,문자열,불린,객체,함수undefined
+        //객체 : 배열
+
+        //배열 생성
+        const arr1=['바나나',1,1.5];
+        const cars = new Array('Saab','Volvo',"BMW")
+
+        //값 변경
+
+       cars[0] = "Opel";
+
+        //추가  push
+        
+        arr1.push(77);
+        cars.push("audi");
+        arr1[arr1.length] = 88;
+
+        // pop -> push 반대
+       //  cars.pop();
+       //concat -> 연결
+
+        //document.querySelector('#exam').innerHTML=cars.toString();
+       // document.querySelector('#exam').innerHTML=cars.concat([2,4,6,8,10]);
+
+
+       //slice -> 삭제
+      // document.querySelector('#exam').innerHTML=cars.slice(1,3);
+
+      //sort 정렬 대문자 우선
+
+       // document.querySelector('#exam').innerHTML=cars.sort();
+        document.querySelector('#exam2').innerHTML=arr1;
+       // document.write(['사당','강남','한남','옥수'].sort());
+
+
+
+       // reverse ( ) : 배열 뒤에서부터 출력
+
+       document.querySelector('#exam').innerHTML=cars.reverse();
+
+        document.write("<br>")
+       const numbers =[ 45,4,9,16,25];
+
+       numbers.forEach(function(num+,idx){
+        document.write(idx + ':'+ num+"<br>")
+       });
+
+       const person = {firstname : 'john',lastname:'doe',age:40}
+
+       //document.write(person.firstname+'<br>')
+    </script>
+</body>
+</html>

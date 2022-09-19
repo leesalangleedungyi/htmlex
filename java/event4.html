@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       // add(3,4);
+
+        //function add(x,y){
+          //  return x+y;
+        //}
+
+        const func1= function(args){
+            args();
+        };
+        function foo(){
+            console.log('함수는 전달 인자로 사용 될 수 있음');
+        }
+
+        func1(foo);
+
+        var foo1 = function(){
+            return function(){
+                console.log('이 함수는 리턴값으로 사용되는 함수임')
+            };
+        };
+        const var1 = foo1();
+        var1();
+    </script>
+</body>
+</html>

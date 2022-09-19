@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+
+        while(true){
+            let dice1= Math.ceil(Math.random()*6)
+            let dice2= Math.ceil(Math.random()*6)
+            
+
+            if (dice1+dice2==5){
+                document.write("("+dice1+","+dice2+")"+"<br>")
+                break;
+            } else{
+                document.write("("+dice1+","+dice2+")"+"<br>")
+            }
+        }
+
+        ///로또
+        while(true){
+            let num1= Math.floor(Math.random()*45)+1;
+            
+            let lotto = num1
+
+            if (lotto.length<7){
+                document.write("("+dice1+","+dice2+")"+"<br>")
+                break;
+            } else{
+                document.write("("+dice1+","+dice2+")"+"<br>")
+            }
+        }
+
+    </script>
+</body>
+</html>

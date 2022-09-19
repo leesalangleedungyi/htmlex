@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1> dom생성</h1>
+    </header>
+    <script>
+        //문서가 로드되면 body 안에 새로운 태그  삽입
+
+        window.onload = function(){
+            
+            let header = document.createElement("h1");
+            let content = document.createTextNode('hello dom');
+            
+            header.appendChild(content);
+            // doucumnet .body : body요소 리턴
+            document.body.appendChild(header);
+            
+
+            // img 태그 생성
+
+            let header = document.createElement("img");
+           // img.setAttribute('src','../아이유4.gif');
+           // img.setAttribute('alt','아이유');
+            img.src = 'C:\html\java\아이유4.gif';
+            img.alt = '아이유';
+            document.body.appendChild(img);
+        };
+
+    </script>
+</body>
+</html>

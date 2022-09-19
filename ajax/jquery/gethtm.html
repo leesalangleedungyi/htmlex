@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../jquery/mystyle.css">
+    <script src="../../jquery/jquery-3.6.1.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <ul class="container">
+        <li>메뉴 1</li>
+        <li>메뉴 2</li>
+        <li>메뉴 3</li>
+        <li>메뉴 4</li>
+    </ul>
+    <div> </div>
+    <script>
+        $(function(){
+            //get으로도 됌
+            $.get({
+                url:"../data/coffee.html",
+                success : function(data){
+                    $("div").append(data);
+                },
+                error:function(xhr,textstatus,error){
+                    $("div").append(xhr.status+ " "+ textstatus);
+                }
+            });
+
+            //기본형
+          //  $.ajax({
+          //      url:"../data/coffee.html",
+          //      success : function(data){
+          //          $("div").append(data);
+          //      },
+          //      error:function(xhr,textstatus,error){
+          //          $("div").append(xhr.status+ " "+ textstatus);
+          //      }
+          //  });
+        });
+    </script>
+</body>
+</html>

@@ -2,14 +2,14 @@ body {
   margin: 10px;
 }
 .box1 {
-  width: 400px;
-  background-color: green;
+  width: 600px;
+  background-color: black;
   color: white;
   padding: 15px;
   text-align: center;
 }
 .box2 {
-  width: 400px;
+  width: 600px;
   display: block;
   margin-top: 15px;
   text-align: center;
@@ -20,8 +20,16 @@ body {
   padding: 10px;
   padding-left: 20px;
   margin-top: 15px;
-  width: 400px;
-  height: 200px;
+  width: 600px;
+  height: 800px;
   font-size: 14px;
   text-align: left;
 }
+.bt1{
+  border: 1px solid skyblue;
+  background-color: white;
+  color: skyblue;
+
+}
+
+
